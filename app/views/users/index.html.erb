@@ -1,27 +1,44 @@
-<div class="">
-  <table>
-    <thead>
-      <tr>
-        <th>name</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @users.each do |user| %>
-        <tr>
-          <td> <%= link_to user.first_name, user_path(user) %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+<!-- component -->
+<div class="container mx-auto">
+  <section class="antialiased bg-gray-100 text-gray-600 h-screen px-4">
+    <div class="flex flex-col justify-center h-full">
+      <!-- Table -->
+      <div class="w-full max-w-4xl mx-auto bg-white shadow-lg rounded-sm border border-gray-200">
+        <header class="px-5 py-4 border-b border-gray-100">
+            <h2 class="font-semibold text-gray-800">Users</h2>
+        </header>
+        <div class="p-3">
+          <div class="overflow-x-auto">
+            <table class="table-auto w-full">
+              <thead class="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
+                <tr>
+                  <th class="p-2 whitespace-nowrap">
+                    <div class="font-semibold text-left">First Name</div>
+                  </th>
+                  <th class="p-2 whitespace-nowrap">
+                    <div class="font-semibold text-left">Last Name</div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="text-sm divide-y divide-gray-100">
+                <% @users.each do |user| %>
+                  <tr>
+                    <td class="p-2 whitespace-nowrap">
+                      <div class="flex items-center">
+                        <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img class="rounded-full" src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-05.jpg" width="40" height="40" alt="Alex Shatov"></div>
+                        <div class="font-medium text-gray-800"><%= user.first_name %></div>
+                      </div>
+                    </td>
+                    <td class="p-2 whitespace-nowrap">
+                      <div class="text-left"><%= user.last_name %></div>
+                    </td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
-
-
-
-<%= form_with model: @user, local: true, html:{class:''}, data: { behavior:'autosave'} , do |form| %>
-  <%= form.label :name %>
-  <%= form.text_field :name %>
-  <%= form.label :password %>
-  <%= form.password_field :password %>
-  <%= form.submit %>
-<% end %>
-
