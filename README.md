@@ -5,13 +5,18 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
+* Ruby version: 3.1.2
+* Rails version: 
+* System dependencies:  7.0.4
 
 * Configuration
 
-* Database creation
+* Database creation:
+  - rails db:setup
+    - creates and migrates db
+    - seeds db
+  - seed db
+    - bin/rails db:seed
 
 * Database initialization
 
