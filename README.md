@@ -1,9 +1,4 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+# Documenting & Cataloging all apps built on RubyOnRails.
 
 * Ruby version: 3.1.2
 * Rails version: 
