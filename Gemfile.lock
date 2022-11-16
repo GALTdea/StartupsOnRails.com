@@ -257,12 +257,9 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
-<<<<<<< HEAD
   devise (~> 4.8, >= 4.8.1)
-=======
   factory_bot_rails
   faker
->>>>>>> e5b9a3e (Installed RSpec and specs for user and company models)
   importmap-rails
   jbuilder
   pg (~> 1.1)
