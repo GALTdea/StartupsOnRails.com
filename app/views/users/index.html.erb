@@ -27,12 +27,12 @@
                       <div class="flex items-center">
                         <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img class="rounded-full" src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-05.jpg" width="40" height="40" alt="Alex Shatov"></div>
                         <div class="font-medium text-gray-800">
-                            <%= link_to  user.first_name, user_path(user) , class:'' %>
+                            <%= link_to  user.email, user_path(user) , class:'' %>
                         </div>
                       </div>
                     </td>
                     <td class="p-2 whitespace-nowrap">
-                      <div class="text-left"><%= user.last_name %></div>
+                      <div class="text-left"><%= user.email %></div>
                     </td>
                   </tr>
                 <% end %>
