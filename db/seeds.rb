@@ -12,7 +12,6 @@ users = User.create([
   {first_name: "Peter", last_name: "Johnson", email:"peter@email.com"}
 ])
 
-
 companies = Company.create([
   {name: "Company 1", user_id: 1},
   {name: "Company 2", user_id: 2},
