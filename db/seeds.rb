@@ -7,12 +7,16 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
-users = User.create([
-  {first_name: "John", last_name: "Smith", email: "john@email.com"},
-  {first_name: "Peter", last_name: "Johnson", email:"peter@email.com"}
+users = User.create!([
+  {first_name: "John", last_name: "Smith", email: "john@email.com", password: "secret"},
+  {first_name: "Peter", last_name: "Johnson", email:"peter@email.com", password: "secret"}
 ])
 
-companies = Company.create([
+user_count = User.count
+
+puts "#{user_count} Users were created."
+
+companies = Company.create!([
   {name: "Company 1", user_id: 1},
   {name: "Company 2", user_id: 2},
   {name: "Company 3", user_id: 1},
@@ -20,3 +24,7 @@ companies = Company.create([
   {name: "Company 5", user_id: 1},
   {name: "Company 6", user_id: 2},
 ])
+
+company_count = Company.count
+
+puts "#{company_count} Companies were created."
