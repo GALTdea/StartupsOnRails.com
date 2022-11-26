@@ -21,7 +21,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_15_224918) do
     t.string "email"
     t.string "url"
     t.boolean "hiring"
-    t.string "status"
+    t.string "status", default: "pending"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

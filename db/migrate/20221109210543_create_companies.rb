@@ -7,7 +7,7 @@ class CreateCompanies < ActiveRecord::Migration[7.0]
       t.string :email
       t.string :url
       t.boolean :hiring
-      t.string :status
+      t.string :status, default: "pending"
       t.references :user, null: false, foreign_key: true
 
       t.timestamps

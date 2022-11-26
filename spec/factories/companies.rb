@@ -1,12 +1,12 @@
 FactoryBot.define do
   factory :company do
-    name { "MyString" }
-    about_company { "MyText" }
+    name { Faker::Company.name }
+    about_company { "company information" }
     about_tech { "MyString" }
-    email { "MyString" }
-    url { "MyString" }
+    email { Faker::Internet.email }
+    url { Faker::Internet.url }
     hiring { false }
-    status { "MyString" }
+    status { "pending" }
     user { nil }
   end
 end
